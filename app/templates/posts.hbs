@@ -1,0 +1,28 @@
+
+<h3 >this is our posts route</h3>
+{{outlet}}
+
+<form {{action 'addC' on='submit'}}>
+        <p>
+              UserID: {{input type="text" value=carID}}
+        </p>
+         <p>
+              Title: {{input type="text" value=carTitle}}
+        </p>
+        <p>
+              Body: {{input type="text" value=carBody}}
+        </p>
+         <p>
+             {{input type='submit' value='Submit'}}
+        </p>
+
+</form>
+
+{{#each model as |post|}}
+<ul>
+
+  <li> <h3>{{post.body}}</h3> </li>
+
+ </ul>
+{{/each}}
+
